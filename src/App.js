@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { BackHandler, UIManager, Easing } from 'react-native';
-import { Drawer, StyleProvider, View } from 'native-base';
+import { Drawer, StyleProvider, View, Container } from 'native-base';
 
 import Navigator from './components/Navigator';
 import Header from './components/Header';
@@ -168,44 +168,46 @@ export default class App extends Component {
     const route = getPage(router.current) || routes.notFound;
     return (
       <StyleProvider style={getTheme(material)}>
-        <Drawer
-          ref={ref => (this.drawer = ref)}
-          open={drawerState === 'opened'}
-          type="displace"
-          negotiatePan
-          tweenDuration={300}
-          tweenEasing="easeOutCubic"
-          useInteractionManager
-          content={<SideBar route={route} />}
-          onClose={closeDrawer}
-          onOpen={openDrawer}
-          panOpenMask={isLogged ? 0.25 : 0}
-        >
-          <Header
-            type={route.headerType}
-            title={route.title}
-            onLeftClick={this._onLeftClick}
-            onItemRef={ref => (this.header = ref)}
-          />
+        <Container>
+          <Drawer
+            ref={ref => (this.drawer = ref)}
+            open={drawerState === 'opened'}
+            type="displace"
+            negotiatePan
+            tweenDuration={300}
+            tweenEasing="easeOutCubic"
+            useInteractionManager
+            content={<SideBar route={route} />}
+            onClose={closeDrawer}
+            onOpen={openDrawer}
+            panOpenMask={isLogged ? 0.25 : 0}
+          >
+            <Header
+              type={route.headerType}
+              title={route.title}
+              onLeftClick={this._onLeftClick}
+              onItemRef={ref => (this.header = ref)}
+            />
 
-          <Navigator
-            ref={ref => (this.navigator = ref)}
-            initialRoute={route}
-            renderScene={this._renderPage}
-            onFocus={this._handlePageWillFocus}
-            onBlur={this._handlePageWillBlur}
-            transition={this._transitionScene}
-          />
+            <Navigator
+              ref={ref => (this.navigator = ref)}
+              initialRoute={route}
+              renderScene={this._renderPage}
+              onFocus={this._handlePageWillFocus}
+              onBlur={this._handlePageWillBlur}
+              transition={this._transitionScene}
+            />
 
-          <Footer
-            type={route.footerType}
-            route={route.routeName}
-            onTabClick={this._onTabClick}
-            ref={ref => (this.footer = ref)}
-          />
+            <Footer
+              type={route.footerType}
+              route={route.routeName}
+              onTabClick={this._onTabClick}
+              ref={ref => (this.footer = ref)}
+            />
 
-          <Toasts />
-        </Drawer>
+            <Toasts />
+          </Drawer>
+        </Container>
       </StyleProvider>
     );
   }
