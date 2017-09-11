@@ -1,0 +1,75 @@
+PODS:
+  - GoogleMaps (2.1.1):
+    - GoogleMaps/Maps (= 2.1.1)
+  - GoogleMaps/Base (2.1.1)
+  - GoogleMaps/Maps (2.1.1):
+    - GoogleMaps/Base
+  - React (0.47.2):
+    - React/Core (= 0.47.2)
+  - react-native-google-maps (0.16.2):
+    - GoogleMaps (= 2.1.1)
+    - React
+  - react-native-maps (0.16.2):
+    - React
+  - React/Core (0.47.2):
+    - Yoga (= 0.47.2.React)
+  - React/RCTActionSheet (0.47.2):
+    - React/Core
+  - React/RCTAnimation (0.47.2):
+    - React/Core
+  - React/RCTGeolocation (0.47.2):
+    - React/Core
+  - React/RCTImage (0.47.2):
+    - React/Core
+    - React/RCTNetwork
+  - React/RCTLinkingIOS (0.47.2):
+    - React/Core
+  - React/RCTNetwork (0.47.2):
+    - React/Core
+  - React/RCTSettings (0.47.2):
+    - React/Core
+  - React/RCTText (0.47.2):
+    - React/Core
+  - React/RCTVibration (0.47.2):
+    - React/Core
+  - React/RCTWebSocket (0.47.2):
+    - React/Core
+  - Yoga (0.47.2.React)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - react-native-google-maps (from `../node_modules/react-native-maps/`)
+  - react-native-maps (from `../node_modules/react-native-maps/`)
+  - React/Core (from `../node_modules/react-native`)
+  - React/RCTActionSheet (from `../node_modules/react-native`)
+  - React/RCTAnimation (from `../node_modules/react-native`)
+  - React/RCTGeolocation (from `../node_modules/react-native`)
+  - React/RCTImage (from `../node_modules/react-native`)
+  - React/RCTLinkingIOS (from `../node_modules/react-native`)
+  - React/RCTNetwork (from `../node_modules/react-native`)
+  - React/RCTSettings (from `../node_modules/react-native`)
+  - React/RCTText (from `../node_modules/react-native`)
+  - React/RCTVibration (from `../node_modules/react-native`)
+  - React/RCTWebSocket (from `../node_modules/react-native`)
+  - Yoga (from `../node_modules/react-native/ReactCommon/yoga`)
+
+EXTERNAL SOURCES:
+  React:
+    :path: "../node_modules/react-native"
+  react-native-google-maps:
+    :path: "../node_modules/react-native-maps/"
+  react-native-maps:
+    :path: "../node_modules/react-native-maps/"
+  Yoga:
+    :path: "../node_modules/react-native/ReactCommon/yoga"
+
+SPEC CHECKSUMS:
+  GoogleMaps: a5b5bbe47734e2443bde781a6aa64e69fdb6d785
+  React: fbe1a006550fb55871cb377ba7741f5d1cfff733
+  react-native-google-maps: e499a22f9a9c0c91a0eb1400d6ee48a7ac815f33
+  react-native-maps: da06bba7e02ade95c5604d97ae0cc4775900c65a
+  Yoga: ff8531e8cf9f7ec92a75dd44286a68c4a084c507
+
+PODFILE CHECKSUM: 9930f9ce6b25ae2c6769015a2f581d2fd641542e
+
+COCOAPODS: 1.2.1

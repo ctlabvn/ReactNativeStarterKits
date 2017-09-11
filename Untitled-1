@@ -1,0 +1,29 @@
+Seminar 01 (Sat 26, Aug)
+
+# Stateless and statefull component
+
+```
+//StatelessCompA
+const StatelessCompA = () => {
+  return <View />;
+}
+
+- No initial and life cycle time =>> less const
+
+
+// StatefullCompB
+class StatefullCompB extends React.PureComponent {
+  render() {
+    return <View />;
+  }
+}
+class StatefullCompC extends React.Component {
+  shouldComponentUpdate() {
+    return true|false;
+  }
+  
+  render() {
+    return <View />;
+  }
+}
+```

@@ -1,0 +1,10 @@
+{
+  "extends": "rallycoding",
+  "rules": {
+    "global-require": "off",
+    "no-underscore-dangle": "off",
+    "no-unused-expressions": "off",
+    "no-param-reassign": "off",
+    "import/no-unresolved": "off"
+  }
+}
