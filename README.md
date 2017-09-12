@@ -54,7 +54,7 @@ You simple use `import abc from '~/components/Header';` instead of `import abc f
 git clone https://gitlab.com/anhtuank7c/ReactNativeStarterKits.git example
 cd example && yarn
 react-native-rename example -b vn.agiletech.example
-npm start reset
+npm start
 Mở thêm 1 cửa sổ lệnh khác và run
 react-native run-ios|run-android
 ```
