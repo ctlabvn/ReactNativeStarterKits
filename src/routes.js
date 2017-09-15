@@ -32,7 +32,7 @@ export default {
     title: 'Shop',
     Page: Shop,
     headerType: 'home',
-    footerType: 'none',
+    footerType: 'home',
     cache: true
   },
   setting: {
