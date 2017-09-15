@@ -7,17 +7,14 @@ import { Content, Text, ListItem, Left, View } from 'native-base';
 
 import * as authActions from '~/store/actions/auth';
 import * as commonActions from '~/store/actions/common';
-// import * as campaignActions from '~/store/actions/campaign';
-
-// import * as accountSelectors from '~/store/selectors/account';
 import * as authSelectors from '~/store/selectors/auth';
 import images from '~/assets/images';
 import Icon from '~/elements/Icon';
+import material from '~/theme/variables/material';
 
 import options from './options';
 import styles from './styles';
 
-// import { API_BASE } from '~/store/constants/api';
 const imagePickerOptions = {
   title: 'Select Avatar',
   customButtons: [{ name: 'fb', title: 'Choose Photo from Facebook' }],

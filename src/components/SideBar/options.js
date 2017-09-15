@@ -1,6 +1,11 @@
 export default {
   listItems: [
     {
+      name: 'Home',
+      route: 'home',
+      icon: 'ios-home'
+    },
+    {
       name: 'My Profile',
       route: 'userProfileUpdate',
       icon: 'ios-contact'
@@ -11,9 +16,9 @@ export default {
       icon: 'ios-images'
     },
     {
-      name: 'QRcode Scanner',
-      route: 'qrCode',
-      icon: 'ios-camera'
+      name: 'Whatsapp',
+      route: 'whatsapp',
+      icon: 'ios-chatbubbles'
     },
     {
       name: 'Settings',

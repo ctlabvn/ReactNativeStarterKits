@@ -180,7 +180,7 @@ export default class App extends Component {
             content={<SideBar route={route} />}
             onClose={closeDrawer}
             onOpen={openDrawer}
-            panOpenMask={isLogged ? 0.25 : 0}
+            panOpenMask={isLogged ? 0.1 : 0}
           >
             <Header
               type={route.headerType}

@@ -4,6 +4,7 @@ import Home from './container/Home';
 import Gallery from './container/Gallery';
 import Setting from './container/Setting';
 import UserProfile from './container/UserProfile';
+import Whatsapp from './container/Whatsapp';
 
 export default {
   home: {
@@ -15,7 +16,14 @@ export default {
   gallery: {
     title: 'Gallery',
     Page: Gallery,
-    headerType: 'none',
+    headerType: 'back',
+    footerType: 'none',
+    cache: true
+  },
+  whatsapp: {
+    title: 'Whatsapp',
+    Page: Whatsapp,
+    headerType: 'back',
     footerType: 'none',
     cache: true
   },

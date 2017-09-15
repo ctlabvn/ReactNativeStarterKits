@@ -79,7 +79,7 @@ export default class extends Component {
     );
     const center = (
       <Item style={styles.searchContainer}>
-        {/*<Icon name="search" style={styles.searchIcon} />*/}
+        <Icon name="search" style={styles.searchIcon} />
         <Input
           value={this.props.searchString}
           autoCapitalize="none"
@@ -91,6 +91,7 @@ export default class extends Component {
           returnKeyType="search"
           underlineColorAndroid="transparent"
         />
+        <Icon name="ios-close" style={styles.searchIcon} />
       </Item>
     );
     const right = (

@@ -3,41 +3,27 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "start":
-      "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
+    "start": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
     "keyiOS": "code-push deployment ls reactnativestarterkits-ios -k",
     "keyAndroid": "code-push deployment ls reactnativestarterkits-android -k",
-    "releaseiOS":
-      "code-push release-react reactnativestarterkits-ios ios --description \"Optional release description iOS here\"",
-    "releaseAndroid":
-      "code-push release-react reactnativestarterkits-android android --description \"Optional release description Android here\"",
-    "releaseForceiOS":
-      "code-push release-react reactnativestarterkits-ios ios -m --description \"Mandatory release description iOS here\"",
-    "releaseForceAndroid":
-      "code-push release-react reactnativestarterkits-android android -m --description \"Mandatory release description Android here\"",
-    "promoteiOS":
-      "code-push promote reactnativestarterkits-ios Staging Production",
-    "promoteAndroid":
-      "code-push promote reactnativestarterkits-android Staging Production",
-    "rollbackStagingiOS":
-      "code-push rollback reactnativestarterkits-ios Staging",
-    "rollbackStagingAndroid":
-      "code-push rollback reactnativestarterkits-android Staging",
-    "rollbackProiOS":
-      "code-push rollback reactnativestarterkits-ios Production",
-    "rollbackProAndroid":
-      "code-push rollback reactnativestarterkits-android Production",
-    "statisticStagingiOS":
-      "code-push deployment history reactnativestarterkits-ios Staging",
-    "statisticStagingAndroid":
-      "code-push deployment history reactnativestarterkits-android Staging",
-    "statisticProiOS":
-      "code-push deployment history reactnativestarterkits-ios Production",
-    "statisticProAndroid":
-      "code-push deployment history reactnativestarterkits-android Production",
+    "releaseiOS": "code-push release-react reactnativestarterkits-ios ios --description \"Optional release description iOS here\"",
+    "releaseAndroid": "code-push release-react reactnativestarterkits-android android --description \"Optional release description Android here\"",
+    "releaseForceiOS": "code-push release-react reactnativestarterkits-ios ios -m --description \"Mandatory release description iOS here\"",
+    "releaseForceAndroid": "code-push release-react reactnativestarterkits-android android -m --description \"Mandatory release description Android here\"",
+    "promoteiOS": "code-push promote reactnativestarterkits-ios Staging Production",
+    "promoteAndroid": "code-push promote reactnativestarterkits-android Staging Production",
+    "rollbackStagingiOS": "code-push rollback reactnativestarterkits-ios Staging",
+    "rollbackStagingAndroid": "code-push rollback reactnativestarterkits-android Staging",
+    "rollbackProiOS": "code-push rollback reactnativestarterkits-ios Production",
+    "rollbackProAndroid": "code-push rollback reactnativestarterkits-android Production",
+    "statisticStagingiOS": "code-push deployment history reactnativestarterkits-ios Staging",
+    "statisticStagingAndroid": "code-push deployment history reactnativestarterkits-android Staging",
+    "statisticProiOS": "code-push deployment history reactnativestarterkits-ios Production",
+    "statisticProAndroid": "code-push deployment history reactnativestarterkits-android Production",
     "test": "jest"
   },
   "dependencies": {
+    "add": "^2.0.6",
     "apisauce": "^0.14.1",
     "color": "^2.0.0",
     "lodash": "^4.17.4",
@@ -48,13 +34,15 @@
     "react-native-fast-image": "^1.0.0",
     "react-native-image-picker": "^0.26.6",
     "react-native-maps": "^0.16.2",
+    "react-native-tab-view": "^0.0.69",
     "react-native-vector-icons": "^4.3.0",
     "react-redux": "^5.0.6",
     "redux": "^3.7.2",
     "redux-form": "^7.0.3",
     "redux-logger": "^3.0.6",
     "redux-persist": "^4.9.1",
-    "redux-saga": "^0.15.6"
+    "redux-saga": "^0.15.6",
+    "yarn": "^1.0.2"
   },
   "devDependencies": {
     "babel-jest": "20.0.3",
@@ -67,7 +55,9 @@
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "rnpm": {
-    "assets": ["./src/assets/fonts"]
+    "assets": [
+      "./src/assets/fonts"
+    ]
   },
   "jest": {
     "preset": "react-native"

@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { StyleSheet, PixelRatio } from 'react-native';
 import material from '~/theme/variables/material';
 
 export default StyleSheet.create({
@@ -19,9 +19,6 @@ export default StyleSheet.create({
   button: {
     // move to bottom and stretch to height
     alignSelf: 'center',
-    backgroundColor: 'black',
-    position: 'absolute',
-    bottom: -15,
     height: 50,
     width: 50,
     borderRadius: 25,
@@ -35,10 +32,7 @@ export default StyleSheet.create({
     top: -2
   },
   photoIcon: {
-    fontSize: 20,
-    color: 'white',
-    alignSelf: 'center',
-    position: 'absolute',
-    top: 10
+    fontSize: PixelRatio.getFontScale() * 24,
+    color: 'white'
   }
 });

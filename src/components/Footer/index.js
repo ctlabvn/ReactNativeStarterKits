@@ -1,7 +1,8 @@
 import React, { PureComponent } from 'react';
-import { Button } from 'native-base';
+import { Button, Footer, FooterTab } from 'native-base';
 import Icon from '~/elements/Icon';
 import styles from './styles';
+import options from './options';
 
 export default class extends PureComponent {
   constructor(props) {
@@ -24,9 +25,15 @@ export default class extends PureComponent {
 
   renderFooterTabs(route) {
     return (
-      <Button style={styles.button} onPress={this.tabClick.bind(this, 'qrCode')}>
-        <Icon name="camera" style={styles.photoIcon} />
-      </Button>
+      <Footer>
+        <FooterTab>
+          {options.footerItems.map((item, index) => (
+            <Button key={index} transparent onPress={this.tabClick.bind(this, item.route)}>
+              <Icon name={item.icon} style={styles.photoIcon} />
+            </Button>
+          ))}
+        </FooterTab>
+      </Footer>
     );
   }
 

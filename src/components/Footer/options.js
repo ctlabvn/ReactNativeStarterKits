@@ -1,19 +1,19 @@
 export default {
   footerItems: [
     {
-      name: 'Home Feeds',
-      route: 'home',
-      icon: 'home'
+      name: 'Karaoke',
+      route: 'karaoke',
+      icon: 'ios-microphone'
     },
     {
       name: 'Gallery',
       route: 'gallery',
-      icon: 'delegation'
+      icon: 'ios-images'
     },
     {
-      name: 'Message',
-      route: 'webrtc',
-      icon: 'message'
+      name: 'Shop',
+      route: 'shop',
+      icon: 'ios-shirt'
     }
   ]
 };
