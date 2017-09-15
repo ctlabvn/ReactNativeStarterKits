@@ -1,0 +1,353 @@
+[
+  {
+    "title": "Hàng gia dụng",
+    "data": [
+      {
+        "id": 1,
+        "name": "Bàn là hơi nước Philip",
+        "price": 870000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 2,
+        "name": "Nồi cơm điện Cucku",
+        "price": 1250000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": false,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 3,
+        "name": "Bóng đèn tiết kiệm điện",
+        "price": 120000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 4,
+        "name": "Máy giặt cửa trước",
+        "price": 8650000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 5,
+        "name": "Máy xay sinh tố đa năng Sun House",
+        "price": 2350000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 6,
+        "name": "Quạt thống nhất",
+        "price": 250000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 7,
+        "name": "Nhiệt kế điện tử",
+        "price": 780000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 8,
+        "name": "Máy bơm nước",
+        "price": 1250000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 9,
+        "name": "Đèn hồng ngoại sưởi ấm",
+        "price": 2850000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 10,
+        "name": "Bóng đèn tích điện",
+        "price": 250000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    ]
+  },
+
+  {
+    "title": "Điện thoại/Máy vi tính",
+    "data": [
+      {
+        "id": 11,
+        "name": "Samsung J3",
+        "price": 2500000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 12,
+        "name": "Iphone 5s",
+        "price": 6900000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": false,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 13,
+        "name": "Huawei G5 mini",
+        "price": 5190000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 14,
+        "name": "BPhone",
+        "price": 9890000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 15,
+        "name": "Asus Zenfone 5",
+        "price": 5000000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 16,
+        "name": "Oppo S1f",
+        "price": 6999000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 17,
+        "name": "Sony XA1",
+        "price": 16500000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 18,
+        "name": "Iphone 7 Plus",
+        "price": 21150000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 19,
+        "name": "Samsung J7 Pro",
+        "price": 6999000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      },
+      {
+        "id": 20,
+        "name": "Iphone X",
+        "price": 301050000,
+        "vat": 10,
+        "discount": 0,
+        "images": [
+          "http://placehold.it/320/92c952",
+          "http://placehold.it/320/fafafa",
+          "http://placehold.it/320/F6F7F8",
+          "http://placehold.it/320/cccccc",
+          "http://placehold.it/320/888888"
+        ],
+        "liked": true,
+        "description":
+          "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."
+      }
+    ]
+  }
+]
