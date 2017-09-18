@@ -41,6 +41,7 @@
 ## API
 - Sử dụng `apisauce` để quản lý rest `endpoint`, cấu hình tại `~/constants/configs.js`
 - Các path khác chỉ cần gọi như sau: `API.get('post/view', {id: 1'})` hoặc `API.post('user/auth', {username: 'anhtuan', pass: 'abc'})`
+- Với các dev dùng máy chạy Windows, bạn cần comment `line 104`, file `android/app/build.gradle`
 
 ## mapping root
 

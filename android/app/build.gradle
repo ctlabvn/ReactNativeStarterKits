@@ -100,6 +100,7 @@ def getPassword(String currentUser, String keyChain) {
    //noinspection GroovyAssignabilityCheck
     stdout.toString().trim()
 }
+// comment line bellow if you using Windows machine
 def pass = getPassword("YOUR_USER_NAME","android_keystore")
 
 android {
