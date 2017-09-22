@@ -59,5 +59,11 @@ export default {
     Page: Register,
     headerType: 'none',
     footerType: 'none'
+  },
+  notFound: {
+    title: 'Login',
+    Page: Login,
+    headerType: 'none',
+    footerType: 'none'
   }
 };
