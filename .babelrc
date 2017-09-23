@@ -1,5 +1,5 @@
 {
-  "presets": ["react-native"],
+  "presets": ["react-native", "flow"],
   "plugins": [
     [
       "babel-plugin-root-import",

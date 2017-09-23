@@ -133,3 +133,9 @@ Production
 npm run rollbackProiOS
 npm run rollbackProAndroid
 ```
+
+## Flow
+
+```
+yarn run flow
+```
