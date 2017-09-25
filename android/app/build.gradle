@@ -139,6 +139,7 @@ android {
         release {
             signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
+            manifestPlaceholders = [permissionName: "android.permission.READ_PHONE_STATE"]
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
     }
