@@ -16,14 +16,14 @@ import { saveRefreshToken, setAuthState, removeLoggedUser } from '../actions/aut
 import { API_TIMEOUT } from '~/constants/api';
 
 export const rejectErrors = res => {
-  const { status } = res;
+  const { status, data } = res;
   console.log('rejectErrors status', status);
   if (status >= 200 && status < 300) {
     return res;
   }
   // we can get message from Promise but no need, just use statusText instead of
   // server return errors
-  return Promise.reject({ message: res.statusText, status });
+  return Promise.reject({ message: data.error, status });
 };
 
 export const respondJson = res => res.data;
@@ -110,7 +110,10 @@ export const createRequestSaga = ({
         // }
 
         const response = await chainRequest;
-        return response.data;
+        if (response.ok) {
+          return response.data;
+        }
+        return rejectErrors(response);
       };
 
       // we do not wait forever for whatever request !!!
