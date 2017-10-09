@@ -41,7 +41,6 @@
 		2D02E4C81E0B4AEC006451C7 /* libRCTWebSocket-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3E991DF850E9000B6D8A /* libRCTWebSocket-tvOS.a */; };
 		2D02E4C91E0B4AEC006451C7 /* libReact.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3DAD3EA31DF850E9000B6D8A /* libReact.a */; };
 		2DCD954D1E0B4F2C00145EB5 /* ReactNativeStarterKitsTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* ReactNativeStarterKitsTests.m */; };
-		3A3EE0621F8BF70C0082F45F /* AIRGoogleMap.h in Frameworks */ = {isa = PBXBuildFile; fileRef = 3A8F258C1F8BEBF6001E5B1E /* AIRGoogleMap.h */; };
 		40236F272EB64AC4ABE6D3DD /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B0A86EDB8577415B86021147 /* Octicons.ttf */; };
 		52E30EA03F0B47ACA576A891 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 06F96841BECE40498C397EF4 /* SimpleLineIcons.ttf */; };
 		57A433362FAD4808BCA6DE22 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5C99CE68F79140FBA8396EAB /* libRNImagePicker.a */; };
@@ -458,7 +457,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				3A3EE0621F8BF70C0082F45F /* AIRGoogleMap.h in Frameworks */,
 				ADBDB9381DFEBF1600ED6528 /* libRCTBlob.a in Frameworks */,
 				5E9157361DD0AC6A00FF2AA8 /* libRCTAnimation.a in Frameworks */,
 				146834051AC3E58100842450 /* libReact.a in Frameworks */,

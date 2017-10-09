@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { Header, Left, Right, Body, Text, Title, Button, Item, Input } from 'native-base';
-import { View } from 'react-native';
+import { View, Keyboard } from 'react-native';
 import * as commonSelectors from '~/store/selectors/common';
 import * as commonActions from '~/store/actions/common';
 import * as notificationActions from '~/store/actions/notification';
@@ -40,6 +40,7 @@ export default class extends Component {
 
   _leftClick = e => {
     const { onLeftClick } = this.props;
+    Keyboard.dismiss();
     onLeftClick && onLeftClick(this.state.type);
   };
 
