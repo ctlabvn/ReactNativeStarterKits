@@ -1,9 +1,8 @@
 import { takeLatest } from 'redux-saga/effects';
 
-// import api from '~/store/api';
+import { replaceNotification } from '~/store/actions/notification';
 import { createRequestSaga } from './common';
 import { setToast } from '../actions/common';
-import { replaceNotification } from '~/store/actions/notification';
 
 const requestGetNotification = createRequestSaga({
   request: api.notification.getNotification,

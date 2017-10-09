@@ -72,6 +72,10 @@ import com.android.build.OutputFile
  * ]
  */
 
+project.ext.react = [
+    entryFile: "index.js"
+]
+
 apply from: "../../node_modules/react-native/react.gradle"
 
 /**
@@ -82,26 +86,12 @@ apply from: "../../node_modules/react-native/react.gradle"
  * Upload all the APKs to the Play Store and people will download
  * the correct one based on the CPU architecture of their device.
  */
-def enableSeparateBuildPerCPUArchitecture = true
+def enableSeparateBuildPerCPUArchitecture = false
 
 /**
  * Run Proguard to shrink the Java bytecode in release builds.
  */
 def enableProguardInReleaseBuilds = false
-def getPassword(String currentUser, String keyChain) {
-   def stdout = new ByteArrayOutputStream()
-   def stderr = new ByteArrayOutputStream()
-   exec {
-       commandLine 'security', '-q', 'find-generic-password', '-a', currentUser, '-s', keyChain, '-w'
-       standardOutput = stdout
-       errorOutput = stderr
-       ignoreExitValue true
-   }
-   //noinspection GroovyAssignabilityCheck
-    stdout.toString().trim()
-}
-// comment line bellow if you using Windows machine
-def pass = getPassword("YOUR_USER_NAME","android_keystore")
 
 android {
     compileSdkVersion 23
@@ -117,16 +107,6 @@ android {
             abiFilters "armeabi-v7a", "x86"
         }
     }
-    signingConfigs {
-        release {
-            if (project.hasProperty('MYAPP_RELEASE_STORE_FILE')) {
-                storeFile file(MYAPP_RELEASE_STORE_FILE)
-                storePassword pass // Change this
-                keyAlias MYAPP_RELEASE_KEY_ALIAS
-                keyPassword pass // Change this
-            }
-        }
-    }
     splits {
         abi {
             reset()
@@ -137,7 +117,6 @@ android {
     }
     buildTypes {
         release {
-            signingConfig signingConfigs.release
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
         }
@@ -164,9 +143,9 @@ dependencies {
     }
     compile 'com.google.android.gms:play-services-base:11.+'
     compile 'com.google.android.gms:play-services-maps:11.+'
-    compile project(':react-native-fast-image')
-    compile project(':react-native-image-picker')
     compile project(':react-native-vector-icons')
+    compile project(':react-native-image-picker')
+    compile project(':react-native-fast-image')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules

@@ -4,32 +4,34 @@
 import React from 'react';
 import { AppRegistry } from 'react-native';
 import { Provider } from 'react-redux';
-import App from './App';
-import Preload from './container/Preload';
-import { configStore } from './store';
-import { forwardTo } from './store/actions';
-import { initRoute, authorizedRoute } from './constants/routes';
+import App from '~/App';
+import Preload from '~/container/Preload';
+import { configStore } from '~/store';
+import { resetTo } from '~/store/actions/common';
+import { initRoute, authorizedRoute } from '~/constants/routes';
 
 class Root extends React.Component {
-  constructor(props) {
-    super(props);
+  state = {
+    isLoading: true
+  };
 
+  componentDidMount() {
     configStore(store => {
       const firstRoute = store.getState().auth.loggedIn ? authorizedRoute : initRoute;
-      store.dispatch(forwardTo(firstRoute, true));
+      store.dispatch(resetTo(firstRoute));
       this.store = store;
-      this.forceUpdate();
+      this.setState({ isLoading: false });
     });
   }
 
-  shouldComponentUpdate() {
-    return false;
+  shouldComponentUpdate(nextProps, { isLoading }) {
+    return this.state.isLoading !== isLoading;
   }
 
   store = null;
 
   render() {
-    if (!this.store) {
+    if (!this.store || this.state.isLoading) {
       return <Preload />;
     }
     return (

@@ -43,8 +43,7 @@ UIManager.setLayoutAnimationEnabledExperimental &&
   state => ({
     router: getRouter(state),
     isLogged: authSelectors.isLogged(state),
-    drawerState: getDrawerState(state),
-    token: authSelectors.getToken(state)
+    drawerState: getDrawerState(state)
   }),
   { ...commonActions, ...accountActions, ...notificationActions }
 )
@@ -103,15 +102,15 @@ export default class App extends Component {
 
   // we can use events to pass between header and footer and page via App container or store
   _renderPage = route => {
+    // <AfterInteractions firstTime={this.firstTime} placeholder={route.Preload || <Preload />}>
     const component = (
-      <AfterInteractions firstTime={this.firstTime} placeholder={route.Preload || <Preload />}>
-        <route.Page
-          route={route}
-          app={this}
-          ref={ref => this.pageInstances.set(route.routeName, ref)}
-        />
-      </AfterInteractions>
+      <route.Page
+        route={route}
+        app={this}
+        ref={ref => this.pageInstances.set(route.routeName, ref)}
+      />
     );
+    // </AfterInteractions>
 
     this.firstTime = false;
     return component;
@@ -149,7 +148,9 @@ export default class App extends Component {
         ref[method]();
         break;
       }
-      ref = ref._reactInternalInstance._renderedComponent._instance;
+      // if (ref._reactInternalInstance._renderedComponent) {
+      //   ref = ref._reactInternalInstance._renderedComponent._instance;
+      // }
       whatdog--;
     }
   }

@@ -1,22 +1,9 @@
 import { takeLatest, all } from 'redux-saga/effects';
-import {
-  ACC_GET_PROFILE,
-  ACC_REPLACE_PROFILE,
-  ACC_UPDATE_PROFILE,
-  ACC_SEARCH_PROFILE,
-  ACC_GET_USER_INFO
-} from '~/constants/types';
 import account from '~/store/api/account';
 import { createRequestSaga } from '~/store/sagas/common';
 import { setToast } from '~/store/actions/common';
 
-import {
-  replaceProfile,
-  replaceSearchedProfile,
-  replaceListFollowedCelebrity,
-  replaceMoreSearchedProfile,
-  replaceHistory
-} from '~/store/actions/account';
+import { replaceProfile } from '~/store/actions/account';
 
 const requestGetProfile = createRequestSaga({
   request: account.getProfile,

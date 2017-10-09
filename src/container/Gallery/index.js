@@ -43,6 +43,14 @@ class Gallery extends React.PureComponent {
     });
   }
 
+  componentWillFocus() {
+    console.log('componentWillFocus');
+  }
+
+  componentWillBlur() {
+    console.log('componentWillBlur');
+  }
+
   render() {
     return (
       <Container>

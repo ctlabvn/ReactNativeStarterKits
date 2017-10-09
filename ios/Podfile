@@ -6,7 +6,7 @@ platform :ios, '8.0'
 # Change 'MerchantApp' to match the target in your Xcode project.
 target 'ReactNativeStarterKits' do
     
-    pod 'Yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
+    pod 'yoga', :path => '../node_modules/react-native/ReactCommon/yoga'
     pod 'React', path: '../node_modules/react-native', :subspecs => [    
     'Core',
     'RCTActionSheet',

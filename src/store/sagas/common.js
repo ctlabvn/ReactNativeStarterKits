@@ -1,23 +1,19 @@
 import { call, put, take, race } from 'redux-saga/effects';
 import { delay } from 'redux-saga';
 
+import { API_TIMEOUT } from '~/constants/api';
 import {
   markRequestPending,
   markRequestSuccess,
   markRequestCancelled,
   markRequestFailed,
   invokeCallback,
-  setToast,
   forwardTo
 } from '../actions/common';
-
-import { saveRefreshToken, setAuthState, removeLoggedUser } from '../actions/auth';
-
-import { API_TIMEOUT } from '~/constants/api';
+import { setAuthState, removeLoggedUser } from '../actions/auth';
 
 export const rejectErrors = res => {
   const { status, data } = res;
-  console.log('rejectErrors status', status);
   if (status >= 200 && status < 300) {
     return res;
   }

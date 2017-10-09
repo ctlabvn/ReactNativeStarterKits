@@ -8,6 +8,7 @@
 - native-base
 - agiletech-navigation
 - redux, react-redux, redux-logger, redux-saga, redux-form, redux-persist
+- react-native-maps
 - lodash, color, apisauce
 - react-native-fast-image
 - react-native-image-picker
@@ -35,7 +36,9 @@
   /selectors              State selectors
 ~/theme                 NativeBase theme
 ~/App.js                Navigation Component
-~/index.js              Root Component
+~/routes.js             Router configuration
+
+index.js                Root Component (RN 49+)
 ```
 
 ## API
