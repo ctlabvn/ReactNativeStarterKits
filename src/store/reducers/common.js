@@ -106,7 +106,7 @@ export const router = (state = initRouteState, { type, payload }) => {
             current: payload,
             stack: [
               state.current,
-              ...(state.stack.length > 2 ? state.stack.splice(0, -1) : state.stack)
+              ...(state.stack.length > 4 ? state.stack.splice(0, -1) : state.stack)
             ]
           };
     }

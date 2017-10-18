@@ -1,5 +1,4 @@
 import React, { PureComponent } from 'react';
-import PropTypes from 'prop-types';
 import { Image, TouchableOpacity, Alert } from 'react-native';
 import { connect } from 'react-redux';
 import ImagePicker from 'react-native-image-picker';
@@ -7,10 +6,9 @@ import { Content, Text, ListItem, Left, View } from 'native-base';
 
 import * as authActions from '~/store/actions/auth';
 import * as commonActions from '~/store/actions/common';
-import * as authSelectors from '~/store/selectors/auth';
+import { getRouter } from '~/store/selectors/common';
 import images from '~/assets/images';
 import Icon from '~/elements/Icon';
-import material from '~/theme/variables/material';
 
 import options from './options';
 import styles from './styles';
@@ -25,15 +23,11 @@ const imagePickerOptions = {
 };
 @connect(
   state => ({
-    socialType: authSelectors.getSocialType(state)
+    router: getRouter(state).current
   }),
   { ...authActions, ...commonActions }
 )
 export default class extends PureComponent {
-  static propTypes = {
-    route: PropTypes.object.isRequired
-  };
-
   onFanProfilePress() {
     const { forwardTo, closeDrawer } = this.props;
     closeDrawer();
@@ -91,7 +85,7 @@ export default class extends PureComponent {
   }
 
   render() {
-    const { route } = this.props;
+    const { router } = this.props;
     return (
       <Content bounces={false} style={styles.container}>
         <ListItem onPress={this.onFanProfilePress.bind(this)} style={styles.drawerCover}>
@@ -115,14 +109,17 @@ export default class extends PureComponent {
             </View>*/}
         </ListItem>
         <View style={styles.listItemContainer}>
-          {options.listItems.map((item, index) => (
-            <ListItem noBorder key={index} button onPress={() => this.navigateTo(item.route)}>
-              <Left>
-                <Icon name={item.icon} style={styles.icon} />
-                <Text style={styles.iconText}>{item.name}</Text>
-              </Left>
-            </ListItem>
-          ))}
+          {options.listItems.map((item, index) => {
+            const isCurrent = router.routeName === item.route;
+            return (
+              <ListItem noBorder key={index} button onPress={() => this.navigateTo(item.route)}>
+                <Left>
+                  <Icon name={item.icon} style={[styles.icon, isCurrent && { color: 'red' }]} />
+                  <Text style={styles.iconText}>{item.name}</Text>
+                </Left>
+              </ListItem>
+            );
+          })}
           <ListItem noBorder button onPress={() => this.props.logout()} style={{ marginTop: 20 }}>
             <Left>
               <Icon name={'ios-log-out'} style={styles.icon} />

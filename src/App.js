@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BackHandler, UIManager, Easing } from 'react-native';
-import { Drawer, StyleProvider, View, Container } from 'native-base';
+import { BackHandler } from 'react-native';
+import { Drawer, StyleProvider, Container } from 'native-base';
 
 import Navigator from './components/Navigator';
 import Header from './components/Header';
 import Footer from './components/Footer';
-import AfterInteractions from './components/AfterInteractions';
+// import AfterInteractions from './components/AfterInteractions';
 import Toasts from './components/Toasts';
 import SideBar from './components/SideBar';
 
-import Preload from './container/Preload';
+// import Preload from './container/Preload';
 
 import getTheme from './theme/components';
 import material from './theme/variables/material';
@@ -20,7 +20,6 @@ import * as commonActions from './store/actions/common';
 import * as accountActions from './store/actions/account';
 // import * as accountSelectors from './store/selectors/account';
 import * as notificationActions from './store/actions/notification';
-import * as authSelectors from './store/selectors/auth';
 
 import routes from './routes';
 
@@ -36,13 +35,12 @@ const getPage = route => {
 //   easing: Easing.bezier(0.075, 0.82, 0.165, 1),
 //   useNativeDriver: true
 // };
-UIManager.setLayoutAnimationEnabledExperimental &&
-  UIManager.setLayoutAnimationEnabledExperimental(true);
+// UIManager.setLayoutAnimationEnabledExperimental &&
+//   UIManager.setLayoutAnimationEnabledExperimental(true);
 
 @connect(
   state => ({
     router: getRouter(state),
-    isLogged: authSelectors.isLogged(state),
     drawerState: getDrawerState(state)
   }),
   { ...commonActions, ...accountActions, ...notificationActions }
@@ -165,7 +163,7 @@ export default class App extends Component {
   };
 
   render() {
-    const { router, drawerState, closeDrawer, openDrawer, isLogged } = this.props;
+    const { router, drawerState, closeDrawer, openDrawer } = this.props;
     const route = getPage(router.current) || routes.notFound;
     return (
       <StyleProvider style={getTheme(material)}>
@@ -178,10 +176,9 @@ export default class App extends Component {
             tweenDuration={300}
             tweenEasing="easeOutCubic"
             useInteractionManager
-            content={<SideBar route={route} />}
+            content={<SideBar />}
             onClose={closeDrawer}
             onOpen={openDrawer}
-            panOpenMask={isLogged ? 0.1 : 0}
           >
             <Header
               type={route.headerType}
