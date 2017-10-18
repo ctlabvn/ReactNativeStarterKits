@@ -142,3 +142,20 @@ npm run rollbackProAndroid
 ```
 yarn run flow
 ```
+
+
+## Generate icon and splash screen
+
+```
+// install tool
+brew install imagemagick
+npm install -g yo generator-rn-toolbox
+
+// generate splash screen images
+yo rn-toolbox:assets --icon icon.png --splash splash.png --store
+```
+
+- splash.png: square 2048x2048
+- icon.png: square 512x512
+
+You may want to follow this module for better UX: https://github.com/crazycodeboy/react-native-splash-screen
