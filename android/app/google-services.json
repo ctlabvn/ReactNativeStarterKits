@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "527122426464",
+    "firebase_url": "https://truemoney-f16c0.firebaseio.com",
+    "project_id": "truemoney-f16c0",
+    "storage_bucket": "truemoney-f16c0.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527122426464:android:9018d1b3302d5eae",
+        "android_client_info": {
+          "package_name": "com.reactnativestarterkits"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527122426464-q8dcqv41l01c280nd6f33o53fnb1cua5.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCDB-WORpXVQuTD6hPSuEEAGDY6w6EmJaM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

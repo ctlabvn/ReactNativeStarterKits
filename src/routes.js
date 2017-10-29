@@ -6,6 +6,7 @@ import Setting from './container/Setting';
 import UserProfile from './container/UserProfile';
 import Whatsapp from './container/Whatsapp';
 import Shop from './container/Shop';
+import Firebase from './container/Firebase';
 
 export default {
   home: {
@@ -57,6 +58,12 @@ export default {
   register: {
     title: 'Register',
     Page: Register,
+    headerType: 'none',
+    footerType: 'none'
+  },
+  firebase: {
+    title: 'Firebase',
+    Page: Firebase,
     headerType: 'none',
     footerType: 'none'
   },

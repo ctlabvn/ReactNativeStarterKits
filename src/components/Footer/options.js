@@ -14,6 +14,11 @@ export default {
       name: 'Shop',
       route: 'shop',
       icon: 'ios-shirt'
+    },
+    {
+      name: 'Firebase',
+      route: 'firebase',
+      icon: 'flame'
     }
   ]
 };

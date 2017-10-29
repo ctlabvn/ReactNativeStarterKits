@@ -1,7 +1,7 @@
 # You Podfile should look similar to this file. React Native currently does not support use_frameworks!
 source 'https://github.com/CocoaPods/Specs.git'
 
-platform :ios, '8.0'
+platform :ios, '9.0'
 
 # Change 'MerchantApp' to match the target in your Xcode project.
 target 'ReactNativeStarterKits' do
@@ -25,6 +25,22 @@ target 'ReactNativeStarterKits' do
     pod 'GoogleMaps'  # <~~ remove this line if you do not want to support GoogleMaps on iOS
     pod 'react-native-maps', path: '../node_modules/react-native-maps/'
     pod 'react-native-google-maps', path: '../node_modules/react-native-maps/'  # <~~ if you need GoogleMaps support on iOS
+    
+    
+    # Required by RNFirebase
+    pod 'Firebase/Core'
+    
+    # [OPTIONAL PODS] - comment out pods for firebase products you won't be using.
+    pod 'Firebase/AdMob'
+    pod 'Firebase/Auth'
+    pod 'Firebase/Crash'
+    pod 'Firebase/Database'
+    pod 'Firebase/DynamicLinks'
+    pod 'Firebase/Performance'
+    pod 'Firebase/Firestore'
+    pod 'Firebase/Messaging'
+    pod 'Firebase/RemoteConfig'
+    pod 'Firebase/Storage'
     
 end
 
