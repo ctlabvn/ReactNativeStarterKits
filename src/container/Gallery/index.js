@@ -6,7 +6,7 @@ import material from '~/theme/variables/material';
 import { create } from 'apisauce';
 import configs from '~/constants/configs';
 
-const THUMB_WIDTH = material.deviceWidth * 0.33;
+const THUMB_WIDTH = material.deviceWidth * 0.25;
 const api = create({
   baseURL: 'https://api.unsplash.com',
   headers: {
@@ -63,7 +63,7 @@ class Gallery extends React.PureComponent {
               style={{ width: THUMB_WIDTH, height: THUMB_WIDTH }}
             />
           )}
-          numColumns={3}
+          numColumns={4}
           keyExtractor={item => item.id}
         />
       </Container>

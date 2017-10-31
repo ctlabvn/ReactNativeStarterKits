@@ -97,16 +97,22 @@ android {
     compileSdkVersion 23
     buildToolsVersion "23.0.1"
 
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
     defaultConfig {
-        applicationId "com.reactnativestarterkits"
+        applicationId "com.nun.poc.rn"
         minSdkVersion 16
         targetSdkVersion 22
         versionCode 1
         versionName "1.0"
+
         ndk {
             abiFilters "armeabi-v7a", "x86"
         }
+//        multiDexEnabled true
     }
+
     splits {
         abi {
             reset()
@@ -119,6 +125,10 @@ android {
         release {
             minifyEnabled enableProguardInReleaseBuilds
             proguardFiles getDefaultProguardFile("proguard-android.txt"), "proguard-rules.pro"
+        }
+        debug {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
         }
     }
     // applicationVariants are e.g. debug, release
@@ -144,14 +154,32 @@ dependencies {
         exclude group: 'com.google.android.gms', module: 'play-services-base'
         exclude group: 'com.google.android.gms', module: 'play-services-maps'
     }
-    compile 'com.google.android.gms:play-services-base:11.+'
-    compile 'com.google.android.gms:play-services-maps:11.+'
+
+    compile 'com.google.android.gms:play-services-base:11.4.2'
+    compile 'com.google.android.gms:play-services-maps:11.4.2'
+
+    // RNFirebase required dependencies
+    compile "com.google.firebase:firebase-core:11.4.2"
+
+
+    // RNFirebase optional dependencies
+//    compile "com.google.firebase:firebase-ads:11.4.2"
+    compile "com.google.firebase:firebase-auth:11.4.2"
+//    compile "com.google.firebase:firebase-config:11.4.2"
+//    compile "com.google.firebase:firebase-crash:11.4.2"
+    compile "com.google.firebase:firebase-database:11.4.2"
+//    compile "com.google.firebase:firebase-firestore:11.4.2"
+    compile "com.google.firebase:firebase-messaging:11.4.2"
+//    compile "com.google.firebase:firebase-perf:11.4.2"
+//    compile "com.google.firebase:firebase-storage:11.4.2"
+
     compile project(':react-native-vector-icons')
     compile project(':react-native-image-picker')
     compile project(':react-native-fast-image')
     compile fileTree(dir: "libs", include: ["*.jar"])
     compile "com.android.support:appcompat-v7:23.0.1"
     compile "com.facebook.react:react-native:+"  // From node_modules
+//    compile 'com.android.support:multidex:1.0.0'
 }
 
 // Run this once to be able to run the application with BUCK
@@ -160,3 +188,5 @@ task copyDownloadableDepsToLibs(type: Copy) {
     from configurations.compile
     into 'libs'
 }
+
+apply plugin: 'com.google.gms.google-services'

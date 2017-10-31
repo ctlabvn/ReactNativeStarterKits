@@ -42,4 +42,4 @@ class Root extends React.Component {
   }
 }
 
-AppRegistry.registerComponent('ReactNativeStarterKits', () => Root);
+AppRegistry.registerComponent('PocReact', () => Root);

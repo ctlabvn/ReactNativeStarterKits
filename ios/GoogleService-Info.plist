@@ -7,21 +7,21 @@
 	<key>AD_UNIT_ID_FOR_INTERSTITIAL_TEST</key>
 	<string>ca-app-pub-3940256099942544/4411468910</string>
 	<key>CLIENT_ID</key>
-	<string>527122426464-3uke4do92fmrbbes8ppg9d1qv2g6smor.apps.googleusercontent.com</string>
+	<string>278009992728-0o4kkdusv6h57i6m7ud2gokinf9r9gmt.apps.googleusercontent.com</string>
 	<key>REVERSED_CLIENT_ID</key>
-	<string>com.googleusercontent.apps.527122426464-3uke4do92fmrbbes8ppg9d1qv2g6smor</string>
+	<string>com.googleusercontent.apps.278009992728-0o4kkdusv6h57i6m7ud2gokinf9r9gmt</string>
 	<key>API_KEY</key>
-	<string>AIzaSyAB6-iTgES9kYREVvKJH4uv4JkI2cHhnIo</string>
+	<string>AIzaSyDTXeP1B7q_naE2unXLS3igN1_iT8qGXGI</string>
 	<key>GCM_SENDER_ID</key>
-	<string>527122426464</string>
+	<string>278009992728</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.agiletechvn.ReactNativeStarterKits</string>
+	<string>com.nun.poc.rn</string>
 	<key>PROJECT_ID</key>
-	<string>truemoney-f16c0</string>
+	<string>poc-r-53c48</string>
 	<key>STORAGE_BUCKET</key>
-	<string>truemoney-f16c0.appspot.com</string>
+	<string>poc-r-53c48.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<true></true>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -33,8 +33,8 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:527122426464:ios:d59e7160cf43d026</string>
+	<string>1:278009992728:ios:dfc7f76b58b1d3c5</string>
 	<key>DATABASE_URL</key>
-	<string>https://truemoney-f16c0.firebaseio.com</string>
+	<string>https://poc-r-53c48.firebaseio.com</string>
 </dict>
 </plist>
