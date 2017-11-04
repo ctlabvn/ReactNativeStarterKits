@@ -67,6 +67,19 @@ react-native run-ios|run-android
 
 ## npm shortcut
 
+#### Build, Install APK
+
+```
+// build apk
+yarn ba
+
+// build and install apk
+yarn ia
+
+// run reverse
+yarn adb-reverse
+```
+
 #### CodePush
 Đã tích hợp vài câu lệnh cho code-push vào `package.json`
 Cách dùng:

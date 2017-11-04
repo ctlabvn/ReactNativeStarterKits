@@ -1,25 +1,45 @@
 {
-  "name": "ReactNativeStarterKits",
+  "name": "$npm_package_name",
   "version": "0.0.1",
+  "push_description": "Update app via code push description",
   "private": true,
   "scripts": {
-    "start": "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
-    "keyiOS": "code-push deployment ls reactnativestarterkits-ios -k",
-    "keyAndroid": "code-push deployment ls reactnativestarterkits-android -k",
-    "releaseiOS": "code-push release-react reactnativestarterkits-ios ios --description \"Optional release description iOS here\"",
-    "releaseAndroid": "code-push release-react reactnativestarterkits-android android --description \"Optional release description Android here\"",
-    "releaseForceiOS": "code-push release-react reactnativestarterkits-ios ios -m --description \"Mandatory release description iOS here\"",
-    "releaseForceAndroid": "code-push release-react reactnativestarterkits-android android -m --description \"Mandatory release description Android here\"",
-    "promoteiOS": "code-push promote reactnativestarterkits-ios Staging Production",
-    "promoteAndroid": "code-push promote reactnativestarterkits-android Staging Production",
-    "rollbackStagingiOS": "code-push rollback reactnativestarterkits-ios Staging",
-    "rollbackStagingAndroid": "code-push rollback reactnativestarterkits-android Staging",
-    "rollbackProiOS": "code-push rollback reactnativestarterkits-ios Production",
-    "rollbackProAndroid": "code-push rollback reactnativestarterkits-android Production",
-    "statisticStagingiOS": "code-push deployment history reactnativestarterkits-ios Staging",
-    "statisticStagingAndroid": "code-push deployment history reactnativestarterkits-android Staging",
-    "statisticProiOS": "code-push deployment history reactnativestarterkits-ios Production",
-    "statisticProAndroid": "code-push deployment history reactnativestarterkits-android Production",
+    "start":
+      "node node_modules/react-native/local-cli/cli.js start -- --reset-cache",
+    "ios": "react-native run-ios",
+    "adb-reverse": "adb reverse tcp:8081 tcp:8081",
+    "androidSdk": "echo \"sdk.dir=$ANDROID_HOME\" > android/local.properties",
+    "ba": "cd android && ./gradlew assembleRelease",
+    "ia":
+      "adb devices | awk 'NR>1 && $1 ~ /^[^:]+$/ { system(\"adb -s \" $1 \" install -r android/app/build/outputs/apk/app-release.apk\") }'",
+    "android": "react-native run-android",
+    "keyiOS": "code-push deployment ls $npm_package_name-ios -k",
+    "keyAndroid": "code-push deployment ls $npm_package_name-android -k",
+    "releaseiOS":
+      "code-push release-react $npm_package_name-ios ios --description $npm_package_push_description",
+    "releaseAndroid":
+      "code-push release-react $npm_package_name-android android --description $npm_package_push_description",
+    "releaseForceiOS":
+      "code-push release-react $npm_package_name-ios ios -m --description $npm_package_push_description",
+    "releaseForceAndroid":
+      "code-push release-react $npm_package_name-android android -m --description $npm_package_push_description",
+    "promoteiOS": "code-push promote $npm_package_name-ios Staging Production",
+    "promoteAndroid":
+      "code-push promote $npm_package_name-android Staging Production",
+    "rollbackStagingiOS": "code-push rollback $npm_package_name-ios Staging",
+    "rollbackStagingAndroid":
+      "code-push rollback $npm_package_name-android Staging",
+    "rollbackProiOS": "code-push rollback $npm_package_name-ios Production",
+    "rollbackProAndroid":
+      "code-push rollback $npm_package_name-android Production",
+    "statisticStagingiOS":
+      "code-push deployment history $npm_package_name-ios Staging",
+    "statisticStagingAndroid":
+      "code-push deployment history $npm_package_name-android Staging",
+    "statisticProiOS":
+      "code-push deployment history $npm_package_name-ios Production",
+    "statisticProAndroid":
+      "code-push deployment history $npm_package_name-android Production",
     "test": "jest"
   },
   "dependencies": {
@@ -58,9 +78,7 @@
     "react-test-renderer": "16.0.0-alpha.12"
   },
   "rnpm": {
-    "assets": [
-      "./src/assets/fonts"
-    ]
+    "assets": ["./src/assets/fonts"]
   },
   "jest": {
     "preset": "react-native"
