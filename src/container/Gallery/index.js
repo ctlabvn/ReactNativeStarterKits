@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import { Container } from 'native-base';
 import Image from '~/components/Image';
+import ConnectionStatusBar from '~/components/ConnectionStatusBar';
 import material from '~/theme/variables/material';
 import { create } from 'apisauce';
 import configs from '~/constants/configs';
@@ -58,6 +59,7 @@ class Gallery extends React.PureComponent {
   render() {
     return (
       <Container>
+        <ConnectionStatusBar />
         <FlatList
           ref={el => (this.dataRef = el)}
           onScroll={e => (this.currentOffset = e.nativeEvent.contentOffset.y)}
