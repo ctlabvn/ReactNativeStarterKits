@@ -23,11 +23,24 @@ class Home extends React.PureComponent {
           <MapView
             style={{
               width: null,
-              height: 300,
+              height: 500,
               flex: 1
             }}
             provider={PROVIDER_GOOGLE}
-          />
+            initialRegion={{
+              latitude: 21.028297,
+              longitude: 105.832992,
+              latitudeDelta: 0.02,
+              longitudeDelta: 0.02
+            }}
+          >
+            <MapView.Marker
+              coordinate={{
+                latitude: 21.028297,
+                longitude: 105.832992
+              }}
+            />
+          </MapView>
         </Content>
       </Container>
     );

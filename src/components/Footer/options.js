@@ -1,9 +1,9 @@
 export default {
   footerItems: [
     {
-      name: 'Karaoke',
-      route: 'karaoke',
-      icon: 'ios-microphone'
+      name: 'Home',
+      route: 'home',
+      icon: 'ios-home'
     },
     {
       name: 'Gallery',

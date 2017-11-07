@@ -2,13 +2,13 @@
  * @flow
  */
 import React from 'react';
-import { AppRegistry } from 'react-native';
+import { AppRegistry, SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
 import App from '~/App';
 import Preload from '~/container/Preload';
 import { configStore } from '~/store';
 import { resetTo } from '~/store/actions/common';
-import { initRoute, authorizedRoute } from '~/constants/routes';
+import material from './src/theme/variables/material';
 
 class Root extends React.Component {
   state = {
@@ -17,29 +17,39 @@ class Root extends React.Component {
 
   componentDidMount() {
     configStore(store => {
-      const firstRoute = store.getState().auth.loggedIn ? authorizedRoute : initRoute;
-      store.dispatch(resetTo(firstRoute));
+      store.dispatch(resetTo('home'));
       this.store = store;
-      this.setState({ isLoading: false });
+      this.setState({ isLoading: false }, () => this.forceUpdate());
     });
   }
 
-  shouldComponentUpdate(nextProps, { isLoading }) {
-    return this.state.isLoading !== isLoading;
+  shouldComponentUpdate() {
+    return false;
   }
 
   store = null;
 
   render() {
     if (!this.store || this.state.isLoading) {
-      return <Preload />;
+      return (
+        <SafeAreaView style={styles.safeArea}>
+          <Preload />
+        </SafeAreaView>
+      );
     }
     return (
       <Provider store={this.store}>
-        <App />
+        <SafeAreaView style={styles.safeArea}>
+          <App />
+        </SafeAreaView>
       </Provider>
     );
   }
 }
-
-AppRegistry.registerComponent('ReactNativeStarterKits', () => Root);
+const styles = {
+  safeArea: {
+    flex: 1,
+    backgroundColor: material.safeAreaBackground
+  }
+};
+AppRegistry.registerComponent('ReactNativeStarterKit', () => Root);

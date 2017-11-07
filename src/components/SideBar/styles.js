@@ -4,7 +4,7 @@ import material from '~/theme/variables/material';
 export default StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#2b2b2d'
+    backgroundColor: '#59656C'
   },
 
   drawerCover: {

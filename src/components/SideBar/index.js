@@ -114,7 +114,7 @@ export default class extends PureComponent {
             return (
               <ListItem noBorder key={index} button onPress={() => this.navigateTo(item.route)}>
                 <Left>
-                  <Icon name={item.icon} style={[styles.icon, isCurrent && { color: 'red' }]} />
+                  <Icon name={item.icon} style={[styles.icon, isCurrent && { color: '#222222' }]} />
                   <Text style={styles.iconText}>{item.name}</Text>
                 </Left>
               </ListItem>

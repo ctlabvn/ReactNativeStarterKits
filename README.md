@@ -1,7 +1,4 @@
-# ReactNativeStarterKits
-
-## Note
-Đọc kỹ hướng dẫn sử dụng trước khi dùng
+# ReactNativeStarterKit
 
 ## Dependencies
 - react-native-vector-icons
@@ -12,6 +9,7 @@
 - lodash, color, apisauce
 - react-native-fast-image
 - react-native-image-picker
+- iPhone X supported
 
 ## Folder structure
 

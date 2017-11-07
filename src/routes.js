@@ -4,7 +4,6 @@ import Home from './container/Home';
 import Gallery from './container/Gallery';
 import Setting from './container/Setting';
 import UserProfile from './container/UserProfile';
-import Whatsapp from './container/Whatsapp';
 import Shop from './container/Shop';
 
 export default {
@@ -17,13 +16,6 @@ export default {
   gallery: {
     title: 'Gallery',
     Page: Gallery,
-    headerType: 'back',
-    footerType: 'none',
-    cache: true
-  },
-  whatsapp: {
-    title: 'Whatsapp',
-    Page: Whatsapp,
     headerType: 'back',
     footerType: 'none',
     cache: true
@@ -48,12 +40,6 @@ export default {
     headerType: 'none',
     cache: true
   },
-  login: {
-    title: 'Login',
-    Page: Login,
-    headerType: 'none',
-    footerType: 'none'
-  },
   register: {
     title: 'Register',
     Page: Register,
@@ -61,8 +47,8 @@ export default {
     footerType: 'none'
   },
   notFound: {
-    title: 'Login',
-    Page: Login,
+    title: 'Home',
+    Page: Home,
     headerType: 'none',
     footerType: 'none'
   }

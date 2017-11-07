@@ -16,13 +16,18 @@ const api = create({
 });
 
 class Gallery extends React.PureComponent {
-  state = {
-    images: [],
-    isLoading: false,
-    page: 1,
-    per_page: 21,
-    order_by: 'latest'
-  };
+  constructor(props) {
+    super(props);
+
+    this.currentOffset = 0;
+    this.state = {
+      images: [],
+      isLoading: false,
+      page: 1,
+      per_page: 21,
+      order_by: 'latest'
+    };
+  }
 
   componentDidMount() {
     this.setState({ isLoading: true }, () => {
@@ -37,24 +42,25 @@ class Gallery extends React.PureComponent {
             isLoading: false,
             images: result.data
           });
-          console.log(result);
         })
         .catch(e => this.setState({ isLoading: false }, () => console.log(e)));
     });
   }
 
   componentWillFocus() {
-    console.log('componentWillFocus');
+    this.dataRef.scrollToOffset({ offset: this.currentOffset + 1, animated: false });
   }
 
   componentWillBlur() {
-    console.log('componentWillBlur');
+    this.dataRef.scrollToOffset({ offset: this.currentOffset - 1, animated: false });
   }
 
   render() {
     return (
       <Container>
         <FlatList
+          ref={el => (this.dataRef = el)}
+          onScroll={e => (this.currentOffset = e.nativeEvent.contentOffset.y)}
           data={this.state.images}
           renderItem={({ item }) => (
             <Image

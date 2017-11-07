@@ -1,16 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BackHandler } from 'react-native';
+import { BackHandler, SafeAreaView } from 'react-native';
 import { Drawer, StyleProvider, Container } from 'native-base';
 
 import Navigator from './components/Navigator';
 import Header from './components/Header';
 import Footer from './components/Footer';
-// import AfterInteractions from './components/AfterInteractions';
+import AfterInteractions from './components/AfterInteractions';
 import Toasts from './components/Toasts';
 import SideBar from './components/SideBar';
 
-// import Preload from './container/Preload';
+import Preload from './container/Preload';
 
 import getTheme from './theme/components';
 import material from './theme/variables/material';
@@ -100,15 +100,15 @@ export default class App extends Component {
 
   // we can use events to pass between header and footer and page via App container or store
   _renderPage = route => {
-    // <AfterInteractions firstTime={this.firstTime} placeholder={route.Preload || <Preload />}>
     const component = (
-      <route.Page
-        route={route}
-        app={this}
-        ref={ref => this.pageInstances.set(route.routeName, ref)}
-      />
+      <AfterInteractions firstTime={this.firstTime} placeholder={route.Preload || <Preload />}>
+        <route.Page
+          route={route}
+          app={this}
+          ref={ref => this.pageInstances.set(route.routeName, ref)}
+        />
+      </AfterInteractions>
     );
-    // </AfterInteractions>
 
     this.firstTime = false;
     return component;
@@ -138,17 +138,19 @@ export default class App extends Component {
   };
 
   handleFocusableComponent(ref, focus = true) {
+    if (!ref) {
+      return;
+    }
     // do not loop forever
+    let element = ref;
     const method = focus ? 'componentWillFocus' : 'componentWillBlur';
     let whatdog = 10;
-    while (ref && whatdog > 0) {
-      if (ref[method]) {
-        ref[method]();
+    while (element._reactInternalFiber && whatdog > 0) {
+      if (element[method]) {
+        element[method]();
         break;
       }
-      // if (ref._reactInternalInstance._renderedComponent) {
-      //   ref = ref._reactInternalInstance._renderedComponent._instance;
-      // }
+      element = element._reactInternalFiber.child && element._reactInternalFiber.child.stateNode;
       whatdog--;
     }
   }

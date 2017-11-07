@@ -27,11 +27,14 @@ export default class extends PureComponent {
     return (
       <Footer>
         <FooterTab>
-          {options.footerItems.map((item, index) => (
-            <Button key={index} transparent onPress={this.tabClick.bind(this, item.route)}>
-              <Icon name={item.icon} style={styles.photoIcon} />
-            </Button>
-          ))}
+          {options.footerItems.map((item, index) => {
+            const isActivated = this.state.route === item.route;
+            return (
+              <Button key={index} transparent onPress={this.tabClick.bind(this, item.route)}>
+                <Icon name={item.icon} style={[styles.icon, isActivated && { color: '#fff' }]} />
+              </Button>
+            );
+          })}
         </FooterTab>
       </Footer>
     );
