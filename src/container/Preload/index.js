@@ -1,10 +1,12 @@
 import React from 'react';
-import { View, Text, Spinner } from 'native-base';
+import { View, Text } from 'native-base';
+import * as Progress from 'react-native-progress';
 import styles from './styles';
 
-const Preload = () =>
+const Preload = () => (
   <View style={styles.container}>
-    <Spinner />
+    <Progress.CircleSnail color={['red', 'green', 'blue']} />
     <Text>Loading...</Text>
-  </View>;
+  </View>
+);
 export default Preload;

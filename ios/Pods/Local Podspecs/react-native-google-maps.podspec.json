@@ -1,6 +1,6 @@
 {
   "name": "react-native-google-maps",
-  "version": "0.16.2",
+  "version": "0.17.1",
   "summary": "React Native Mapview component for iOS + Android",
   "authors": {
     "intelligibabble": "leland.m.richardson@gmail.com"

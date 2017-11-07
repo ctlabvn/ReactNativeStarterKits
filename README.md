@@ -7,9 +7,10 @@
 - redux, react-redux, redux-logger, redux-saga, redux-form, redux-persist
 - react-native-maps
 - lodash, color, apisauce
-- react-native-fast-image
+- react-native-progress
+- react-native-progress-image
 - react-native-image-picker
-- iPhone X supported
+- iPhoneX supported
 
 ## Folder structure
 
@@ -23,6 +24,8 @@
   /SideBar
     options.js            All SideBar items
   /Toast
+  /Image                  Custom Image with progress
+  /ProgressImage
 ~/elements              Dump component without state
 ~/constants             App constants
 ~/container             App screens

@@ -4,7 +4,6 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.imagepicker.ImagePickerPackage;
-import com.dylanvann.fastimage.FastImageViewPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.airbnb.android.react.maps.MapsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -29,7 +28,6 @@ public class MainApplication extends Application implements ReactApplication {
           new MainReactPackage(),
             new MapsPackage(),
             new ImagePickerPackage(),
-            new FastImageViewPackage(),
             new VectorIconsPackage()
       );
     }

@@ -4057,15 +4057,15 @@ react-native-easy-grid@0.1.15:
   dependencies:
     lodash "^4.11.1"
 
-react-native-fast-image@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/react-native-fast-image/-/react-native-fast-image-1.0.0.tgz#a88337efa18fd34d530bab9ee05680374f3e2a2d"
-  dependencies:
-    prop-types "^15.5.10"
-
 react-native-image-picker@^0.26.6:
   version "0.26.6"
   resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-0.26.6.tgz#387f95dd61a6cd34ac6a7eda2744a3895fb3bc6f"
+
+react-native-image-progress@^1.0.1:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/react-native-image-progress/-/react-native-image-progress-1.0.1.tgz#5ceb4cfefd39d7ebdffab802bc984b5a0fc41021"
+  dependencies:
+    prop-types "^15.5.10"
 
 "react-native-keyboard-aware-scroll-view@https://github.com/GeekyAnts/react-native-keyboard-aware-scroll-view":
   version "0.2.9"
@@ -4078,6 +4078,12 @@ react-native-image-picker@^0.26.6:
 react-native-maps@^0.17.1:
   version "0.17.1"
   resolved "https://registry.yarnpkg.com/react-native-maps/-/react-native-maps-0.17.1.tgz#ab2236341fd984dac8864202ae55331bc262f60c"
+
+react-native-progress@^3.4.0:
+  version "3.4.0"
+  resolved "https://registry.yarnpkg.com/react-native-progress/-/react-native-progress-3.4.0.tgz#c002e6efb2f0b82dd6889510e669c492da2718ac"
+  dependencies:
+    prop-types "^15.5.8"
 
 react-native-vector-icons@^4.3.0:
   version "4.3.0"

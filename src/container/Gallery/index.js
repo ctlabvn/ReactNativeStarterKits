@@ -1,12 +1,12 @@
 import React from 'react';
 import { FlatList } from 'react-native';
 import { Container } from 'native-base';
-import Image from 'react-native-fast-image';
+import Image from '~/components/Image';
 import material from '~/theme/variables/material';
 import { create } from 'apisauce';
 import configs from '~/constants/configs';
 
-const THUMB_WIDTH = material.deviceWidth * 0.33;
+const THUMB_WIDTH = material.deviceWidth * 0.3;
 const api = create({
   baseURL: 'https://api.unsplash.com',
   headers: {
@@ -62,13 +62,18 @@ class Gallery extends React.PureComponent {
           ref={el => (this.dataRef = el)}
           onScroll={e => (this.currentOffset = e.nativeEvent.contentOffset.y)}
           data={this.state.images}
+          showsVerticalScrollIndicator={false}
           renderItem={({ item }) => (
             <Image
               source={{ uri: item.urls.small }}
-              resizeMode={Image.resizeMode.cover}
+              resizeMode="cover"
               style={{ width: THUMB_WIDTH, height: THUMB_WIDTH }}
             />
           )}
+          contentContainerStyle={{
+            justifyContent: 'center',
+            alignItems: 'center'
+          }}
           numColumns={3}
           keyExtractor={item => item.id}
         />
