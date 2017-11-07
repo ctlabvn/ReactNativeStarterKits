@@ -1,4 +1,3 @@
-import Login from './container/Login';
 import Register from './container/Register';
 import Home from './container/Home';
 import Gallery from './container/Gallery';

@@ -4,7 +4,7 @@ import { WebView, TouchableOpacity, Modal } from 'react-native';
 import { Container, Header, Body, View, Text, Button, Item } from 'native-base';
 import * as Progress from 'react-native-progress';
 import Icon from '~/elements/Icon';
-import { getDomainName } from '~/utils/posts';
+import { getDomainName } from '~/utils/common';
 import { closeBrowser } from '~/store/actions/common';
 import styles from './styles';
 

@@ -25,7 +25,9 @@
     options.js            All SideBar items
   /Toast
   /Image                  Custom Image with progress
-  /ProgressImage
+  /ProgressImage        Progess image build-in
+  /Gallery              Gallery
+  /Browser              Inapp-browser
 ~/elements              Dump component without state
 ~/constants             App constants
 ~/container             App screens
