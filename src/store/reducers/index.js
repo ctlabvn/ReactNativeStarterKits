@@ -2,7 +2,7 @@ import { combineReducers } from 'redux';
 import { reducer as form } from 'redux-form';
 import notification from './notification';
 import auth from './auth';
-import { router, requests, toast, modal, drawer } from './common';
+import { router, requests, toast, modal, drawer, gallery, browser } from './common';
 
 export default combineReducers({
   form,
@@ -11,7 +11,9 @@ export default combineReducers({
   ui: combineReducers({
     toast,
     modal,
-    drawer
+    drawer,
+    gallery,
+    browser
   }),
   requests,
   auth

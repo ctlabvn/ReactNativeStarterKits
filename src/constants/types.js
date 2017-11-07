@@ -64,3 +64,15 @@ export const DRAWER_CLOSE = 'app/closeDrawer';
  * INVOKE
  */
 export const INVOKE_CALLBACK = 'app/invokeCallBack';
+
+/**
+ * GALLERY
+ */
+export const GALLERY_OPEN = 'app/playingGallery';
+export const GALLERY_CLOSE = 'app/closeGallery';
+
+/**
+ * BROWSER
+ */
+export const BROWSER_OPEN = 'app/openBrowser';
+export const BROWSER_CLOSE = 'app/closeBrowser';

@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import MapView, { PROVIDER_GOOGLE } from 'react-native-maps';
-import { Container, Content, Card, CardItem } from 'native-base';
+import { Container, Content, Card, CardItem, Text } from 'native-base';
 import * as Progress from 'react-native-progress';
 import * as commonActions from '~/store/actions/common';
 import * as authActions from '~/store/actions/auth';
@@ -26,7 +26,7 @@ class Home extends React.PureComponent {
               <MapView
                 style={{
                   width: null,
-                  height: 300,
+                  height: 150,
                   flex: 1
                 }}
                 provider={PROVIDER_GOOGLE}
@@ -44,6 +44,15 @@ class Home extends React.PureComponent {
                   }}
                 />
               </MapView>
+            </CardItem>
+          </Card>
+          <Card>
+            <CardItem>
+              <Text
+                onPress={() => this.props.app.props.openBrowser('https://github.com/agiletechvn/')}
+              >
+                agiletechvn
+              </Text>
             </CardItem>
           </Card>
 

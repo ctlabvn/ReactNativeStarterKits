@@ -12,7 +12,11 @@ import {
   DRAWER_CLOSE,
   MODAL_OPEN,
   MODAL_CLOSE,
-  INVOKE_CALLBACK
+  INVOKE_CALLBACK,
+  GALLERY_OPEN,
+  GALLERY_CLOSE,
+  BROWSER_OPEN,
+  BROWSER_CLOSE
 } from '~/constants/types';
 
 /**
@@ -92,3 +96,18 @@ export const invokeCallback = (callback, ...args) => ({
   type: INVOKE_CALLBACK,
   payload: callback && callback.call(null, ...args)
 });
+
+/**
+ * GALLERY
+ */
+export const openGallery = (images = [], playingIndex = 0) => ({
+  type: GALLERY_OPEN,
+  payload: { images, playingIndex }
+});
+export const closeGallery = () => ({ type: GALLERY_CLOSE });
+
+/**
+ * BROWSER
+ */
+export const openBrowser = payload => ({ type: BROWSER_OPEN, payload });
+export const closeBrowser = () => ({ type: BROWSER_CLOSE });

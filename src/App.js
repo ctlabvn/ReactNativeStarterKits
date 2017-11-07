@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { BackHandler, SafeAreaView } from 'react-native';
+import { BackHandler } from 'react-native';
 import { Drawer, StyleProvider, Container } from 'native-base';
 
 import Navigator from './components/Navigator';
@@ -9,6 +9,8 @@ import Footer from './components/Footer';
 import AfterInteractions from './components/AfterInteractions';
 import Toasts from './components/Toasts';
 import SideBar from './components/SideBar';
+import Browser from './components/Browser';
+import Gallery from './components/Gallery';
 
 import Preload from './container/Preload';
 
@@ -18,7 +20,6 @@ import material from './theme/variables/material';
 import { getDrawerState, getRouter } from './store/selectors/common';
 import * as commonActions from './store/actions/common';
 import * as accountActions from './store/actions/account';
-// import * as accountSelectors from './store/selectors/account';
 import * as notificationActions from './store/actions/notification';
 
 import routes from './routes';
@@ -41,6 +42,7 @@ const getPage = route => {
 @connect(
   state => ({
     router: getRouter(state),
+    isPlayingGallery: state.ui.gallery.isPlaying,
     drawerState: getDrawerState(state)
   }),
   { ...commonActions, ...accountActions, ...notificationActions }
@@ -55,7 +57,13 @@ export default class App extends Component {
 
   componentDidMount() {
     BackHandler.addEventListener('hardwareBackPress', () => {
-      const { router, goBack } = this.props;
+      const { router, goBack, isPlayingGallery, closeGallery } = this.props;
+      // close gallery if exist
+      if (isPlayingGallery) {
+        closeGallery();
+        return true;
+      }
+      // exit app
       if (router.stack.length === 0) {
         return false;
       }
@@ -207,6 +215,8 @@ export default class App extends Component {
 
             <Toasts />
           </Drawer>
+          <Gallery />
+          <Browser />
         </Container>
       </StyleProvider>
     );

@@ -16,8 +16,8 @@ export default {
   gallery: {
     title: 'Gallery',
     Page: Gallery,
-    headerType: 'back',
-    footerType: 'none',
+    headerType: 'home',
+    footerType: 'home',
     cache: true
   },
   shop: {

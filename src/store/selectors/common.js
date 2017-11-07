@@ -7,3 +7,4 @@ export const getDrawerState = state => state.ui.drawer.drawerState || 'closed';
 export const getModalState = state => state.ui.modal.modalState || 'closed';
 export const getRouter = state => state.router;
 export const getSearchString = state => state.ui.search;
+export const getGallery = state => state.ui.gallery;

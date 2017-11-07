@@ -14,7 +14,11 @@ import {
   MODAL_OPEN,
   MODAL_CLOSE,
   DRAWER_OPEN,
-  DRAWER_CLOSE
+  DRAWER_CLOSE,
+  GALLERY_OPEN,
+  GALLERY_CLOSE,
+  BROWSER_OPEN,
+  BROWSER_CLOSE
 } from '~/constants/types';
 
 /**
@@ -118,6 +122,46 @@ export const router = (state = initRouteState, { type, payload }) => {
       return initRouteState;
     case APP_WIPE_DATA:
       return initRouteState;
+    default:
+      return state;
+  }
+};
+
+/**
+ * GALLERY
+ */
+const initGallery = {
+  isPlaying: false,
+  images: [],
+  playingIndex: 0
+};
+
+export const gallery = (state = initGallery, { type, payload }) => {
+  switch (type) {
+    case GALLERY_OPEN:
+      return { ...state, ...payload, isPlaying: true };
+    case GALLERY_CLOSE:
+      return initGallery;
+    default:
+      return state;
+  }
+};
+
+/**
+ * BROWSER
+ */
+
+const initBrowser = {
+  uri: null,
+  showing: false
+};
+
+export const browser = (state = initBrowser, { type, payload }) => {
+  switch (type) {
+    case BROWSER_OPEN:
+      return { ...state, showing: true, uri: payload };
+    case BROWSER_CLOSE:
+      return initBrowser;
     default:
       return state;
   }
