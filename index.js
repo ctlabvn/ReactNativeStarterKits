@@ -1,11 +1,20 @@
 import React from 'react';
 import { AppRegistry, SafeAreaView } from 'react-native';
 import { Provider } from 'react-redux';
+import { isIphoneX } from 'react-native-iphone-x-helper';
 import App from './src/App';
 import Preload from './src/container/Preload';
 import { configStore } from './src/store';
 import { resetTo } from './src/store/actions/common';
 import material from './src/theme/variables/material';
+
+const SafeView = ({ children }) => {
+  const isiphoneX = isIphoneX();
+  if (isiphoneX) {
+    return <SafeAreaView style={styles.safeArea}>{children}</SafeAreaView>;
+  }
+  return children;
+};
 
 class Root extends React.Component {
   state = {
@@ -29,20 +38,21 @@ class Root extends React.Component {
   render() {
     if (!this.store || this.state.isLoading) {
       return (
-        <SafeAreaView style={styles.safeArea}>
+        <SafeView>
           <Preload />
-        </SafeAreaView>
+        </SafeView>
       );
     }
     return (
       <Provider store={this.store}>
-        <SafeAreaView style={styles.safeArea}>
+        <SafeView>
           <App />
-        </SafeAreaView>
+        </SafeView>
       </Provider>
     );
   }
 }
+
 const styles = {
   safeArea: {
     flex: 1,

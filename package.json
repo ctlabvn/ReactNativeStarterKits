@@ -7,8 +7,7 @@
     "adb-reverse": "adb reverse tcp:8081 tcp:8081",
     "androidSdk": "echo \"sdk.dir=$ANDROID_HOME\" > android/local.properties",
     "ba": "cd android && ./gradlew assembleRelease",
-    "ia":
-      "adb devices | awk 'NR>1 && $1 ~ /^[^:]+$/ { system(\"adb -s \" $1 \" install -r android/app/build/outputs/apk/app-release.apk\") }'",
+    "ia": "adb devices | awk 'NR>1 && $1 ~ /^[^:]+$/ { system(\"adb -s \" $1 \" install -r android/app/build/outputs/apk/app-release.apk\") }'",
     "ios": "react-native run-ios",
     "android": "react-native run-android",
     "test": "jest"
@@ -25,6 +24,7 @@
     "react-native": "0.54.0",
     "react-native-image-picker": "^0.26.7",
     "react-native-image-progress": "^1.1.0",
+    "react-native-iphone-x-helper": "^1.0.2",
     "react-native-photo-view": "^1.5.2",
     "react-native-progress": "^3.4.0",
     "react-native-vector-icons": "^4.5.0",
@@ -43,7 +43,9 @@
     "react-test-renderer": "^16.3.0-alpha.1"
   },
   "rnpm": {
-    "assets": ["./src/assets/fonts"]
+    "assets": [
+      "./src/assets/fonts"
+    ]
   },
   "jest": {
     "preset": "react-native"
